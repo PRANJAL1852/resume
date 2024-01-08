@@ -16,7 +16,8 @@
             background-color: #e74c3c;
             color: #fff;
             text-align: center;
-            padding: 1rem;
+            padding: 1.5rem; /* Increased padding for more space */
+            margin-bottom: 20px; /* Added margin to create space between title and content */
         }
         section {
             padding: 1rem;
@@ -44,11 +45,24 @@
             border: none;
             cursor: pointer;
         }
+        /* Added a new class for the appreciation lines */
+        .appreciation-lines {
+            text-align: center;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
     </style>
 </head>
 <body>
     <header>
         <h1>Menu - English Honours Restaurant</h1>
+        <!-- Added appreciation lines -->
+        <div class="appreciation-lines">
+            <p>Indulge in the goodness of our dishes</p>
+            <p>Healthy, rich in protein, vitamins, and calcium</p>
+            <p>Nutrient-packed, tasty, and hygienic food</p>
+            <p>We craft non-veg and veg specialties with utmost care</p>
+        </div>
     </header>
     <section>
         <div class="menu">
@@ -67,7 +81,6 @@
                 <p>Price: ₹80</p>
                 <p>Description: Thin, crispy rice crepes filled with a spiced potato mixture, served with coconut chutney and tangy sambar.</p>
             </div>
-            <!-- Add more dishes as needed -->
             <div class="dish">
                 <h3>Butter Paneer</h3>
                 <p>Price: ₹110</p>
@@ -88,10 +101,24 @@
                 <p>Price: ₹100</p>
                 <p>Description: Creamy pasta with a white sauce, loaded with vegetables.</p>
             </div>
-            <!-- Add more dishes as needed -->
+            <div class="dish">
+                <h3>Red Sauce Pasta</h3>
+                <p>Price: ₹90</p>
+                <p>Description: Pasta cooked in a flavorful tomato-based sauce with herbs and spices.</p>
+            </div>
+            <div class="dish">
+                <h3>Chilli Potato</h3>
+                <p>Price: ₹80</p>
+                <p>Description: Crispy fried potatoes tossed in a spicy and tangy chilli sauce.</p>
+            </div>
+            <div class="dish">
+                <h3>Chilli Paneer</h3>
+                <p>Price: ₹110</p>
+                <p>Description: Paneer cubes stir-fried with bell peppers and onions in a spicy chilli sauce.</p>
+            </div>
         </div>
     </section>
-    <button onclick="openWhatsApp()">Give your feedback here</button>
+    <button onclick="openWhatsApp()">Message on WhatsApp</button>
     <script>
         function openWhatsApp() {
             window.open('https://api.whatsapp.com/send?phone=918178565494&text=You%20can%20give%20your%20feedback%20here', '_blank');
