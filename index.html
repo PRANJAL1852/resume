@@ -3,119 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CT CAMPUS - Coaching Services</title>
+    <title>Menu - Naukar Restaurant</title>
     <style>
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
+            font-family: 'Arial', sans-serif;
             background-color: #f8f8f8;
             color: #333;
+            margin: 0;
+            padding: 0;
         }
-
         header {
-            background-color: #343a40;
+            background-color: #e74c3c;
             color: #fff;
-            padding: 1em;
             text-align: center;
+            padding: 1rem;
         }
-
         section {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
+            padding: 1rem;
+        }
+        .menu {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 70px; /* Adjusted margin for the WhatsApp button */
+        }
+        .dish {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ddd;
+            margin: 5px;
             background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
         }
-
-        h1, h2 {
-            color: #343a40;
-        }
-
-        p {
-            line-height: 1.6;
-            color: #555;
-        }
-
-        /* WhatsApp Button styles */
-        .whatsapp-button {
-            background-color: #25D366; /* WhatsApp green color */
-            color: white;
-            padding: 15px 25px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 18px;
-            margin-top: 20px;
-            cursor: pointer;
-            border: none;
-            border-radius: 8px;
-            transition: background-color 0.3s ease;
-        }
-
-        .whatsapp-button:hover {
-            background-color: #128C7E; /* Darker shade on hover */
-        }
-
-        footer {
-            background-color: #343a40;
-            color: #fff;
-            padding: 1em;
-            text-align: center;
+        button {
             position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-
-        /* Adjust the size of the "All rights reserved" area */
-        footer p {
-            font-size: 14px;
-            margin: 5px 0;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 10px;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            cursor: pointer;
         }
     </style>
 </head>
 <body>
-
     <header>
-        <h1>CT CAMPUS Coaching Services</h1>
+        <h1>Menu - Naukar Restaurant</h1>
     </header>
-
     <section>
-        <h2>Welcome to CT CAMPUS</h2>
-        <p>
-            Join us for quality coaching services at CT CAMPUS. Our coaching center is located at Uttam Nagar, near pillar no-657, Delhi, 110059.
-        </p>
-        <p>
-            At CT CAMPUS, we believe in nurturing the potential within every aspiring individual, shaping them into future leaders and achievers. Embarking on the journey to become an IAS officer is a noble pursuit, and we are here to guide you every step of the way. Join our coaching program, where excellence meets mentorship, and aspirations transform into achievements.
-        </p>
-        <p>
-            Moreover, we are not limited to IAS coaching alone; we also provide exceptional classes for CBSE, TET, TGT, and PGT exams. Our comprehensive approach ensures that you are well-prepared for a spectrum of academic pursuits.
-        </p>
-        <p>
-            Welcome to the vibrant world of CT CAMPUS, where learning is not just a process but a celebration! Embark on your journey to become an IAS officer with us, and discover a place where education is infused with joy, success is savored, and dreams are crafted into reality. At CT CAMPUS, we believe that the pursuit of knowledge should be as enjoyable as it is rewarding.
-        </p>
-        <p>
-            Join our dynamic coaching program, where each class is an opportunity to enjoy the process of learning, ensuring a healthy and holistic development. As you believe in your aspirations, we stand by you, providing not just IAS coaching but also engaging classes for CBSE, TET, TGT, and PGT exams. It's not just about acquiring knowledge; it's about creating a wealthy reserve of wisdom that propels you towards success. Trust in your potential, revel in the learning experience, and let CT CAMPUS be the catalyst for your prosperous and healthy academic journey. Your success story starts here!
-        </p>
-
-        <!-- WhatsApp Button -->
-        <button class="whatsapp-button" onclick="openWhatsApp()">Message on WhatsApp</button>
+        <div class="menu">
+            <div class="dish">
+                <h3>Butter Chicken</h3>
+                <p>Price: ₹120</p>
+                <p>Description: Creamy and flavorful curry made with tender chicken, butter, and aromatic spices.</p>
+            </div>
+            <div class="dish">
+                <h3>Biryani</h3>
+                <p>Price: ₹150</p>
+                <p>Description: Fragrant basmati rice cooked with aromatic spices and your choice of meat, creating a delightful blend of flavors.</p>
+            </div>
+            <div class="dish">
+                <h3>Dosa</h3>
+                <p>Price: ₹80</p>
+                <p>Description: Thin, crispy rice crepes filled with a spiced potato mixture, served with coconut chutney and tangy sambar.</p>
+            </div>
+            <div class="dish">
+                <h3>Chole Bhature</h3>
+                <p>Price: ₹90</p>
+                <p>Description: Spicy chickpeas (chole) paired with deep-fried bread (bhature), a hearty and satisfying North Indian dish.</p>
+            </div>
+            <!-- Add more dishes as needed -->
+        </div>
     </section>
-
-    <footer>
-        <p>&copy; 2024 CT CAMPUS Coaching Services. All rights reserved.</p>
-    </footer>
-
+    <button onclick="openWhatsApp()">Message on WhatsApp</button>
     <script>
         function openWhatsApp() {
-            var phoneNumber = '918178565494'; // Replace with your actual WhatsApp number, including the country code
-            var message = 'Hello CT CAMPUS! I am interested in your coaching services.';
-            var encodedMessage = encodeURIComponent(message);
-            var whatsappLink = 'https://wa.me/' + phoneNumber + '?text=' + encodedMessage;
-            window.open(whatsappLink, '_blank');
+            window.open('https://api.whatsapp.com/send?phone=918178565494&text=Can%20I%20online%20order%20one%20of%20your%20cuisines%20or%20do%20I%20have%20a%20feedback%20to%20share%3F', '_blank');
         }
     </script>
-
 </body>
 </html>
